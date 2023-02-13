@@ -1,0 +1,24 @@
+syntax = "proto3";
+option go_package = ".;message";
+
+package message;
+
+// The algorithms service definition.
+service Algorithms {
+  rpc label(LabelRequest) returns(LabelReply) {}
+}
+
+// The request message containing the base64 encoded image.
+message LabelRequest {
+  string base64_img = 1;
+}
+
+message LabelResult {
+  float  confidence = 1;
+  string label = 2;
+}
+
+// The response message containing the greetings
+message LabelReply {
+  repeated LabelResult results = 1;
+}
