@@ -1,10 +1,13 @@
 # Build
-
 ```
-CGO_CFLAGS=-I./ CGO_LDFLAGS=-L./lib go build  -o server server.go
+CGO_CFLAGS=-I/tmp/grpc CGO_LDFLAGS=-L/tmp/grpc/lib go build  -o server *.go
 ```
 
 # Install
+
+```
+export CGO_LDFLAGS=-L/tmp/grpc/lib
+```
 
 # Run
 

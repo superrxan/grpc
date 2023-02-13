@@ -138,7 +138,6 @@ func (f *labelImage) Exec(args []byte) (*message.LabelReply, error) {
 	})
 
 	var reply = &message.LabelReply{
-		Results: make([]*message.LabelResult, 1),
 	}
 
 	for _, v := range results {
